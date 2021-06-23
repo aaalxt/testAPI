@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.test.API</groupId>
+    <artifactId>com.test.API</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+
+        <file_encoding>UTF-8</file_encoding>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <testng>fvt</testng>
+
+    </properties>
+
+
+
+
+
+    <dependencies>
+
+    <!--《#######################引入对象转化json字符串的包；打印日志包#########################################》-->
+
+    <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+
+    <dependency>
+
+        <groupId>com.alibaba</groupId>
+
+        <artifactId>fastjson</artifactId>
+
+        <version>1.2.51.sec06</version>
+
+    </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.sf.ezmorph/ezmorph -->
+
+        <dependency>
+
+            <groupId>net.sf.ezmorph</groupId>
+
+            <artifactId>ezmorph</artifactId>
+
+            <version>1.0.3</version>
+
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+
+        <dependency>
+
+            <groupId>commons-logging</groupId>
+
+            <artifactId>commons-logging</artifactId>
+
+            <version>1.2</version>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>net.sf.morph</groupId>
+
+            <artifactId>morph</artifactId>
+
+            <version>1.1.1</version>
+
+        </dependency>
+
+        <!--<dependency>-->
+
+            <!--<groupId>log4j</groupId>-->
+
+            <!--<artifactId>log4j</artifactId>-->
+
+            <!--<version>1.2.17</version>-->
+
+        <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+
+        <dependency>
+
+            <groupId>org.slf4j</groupId>
+
+            <artifactId>slf4j-api</artifactId>
+
+            <version>1.7.25</version>
+
+        </dependency>
+
+
+
+
+
+        <!--《引入mysql包》-->
+
+        <dependency>
+
+            <groupId>mysql</groupId>
+
+            <artifactId>mysql-connector-java</artifactId>
+
+            <version>5.1.46</version>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>commons-dbcp</groupId>
+
+            <artifactId>commons-dbcp</artifactId>
+
+            <version>1.4</version>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>com.google.code.gson</groupId>
+
+            <artifactId>gson</artifactId>
+
+            <version>2.2.2</version>
+
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+
+        <dependency>
+
+            <groupId>com.google.guava</groupId>
+
+            <artifactId>guava</artifactId>
+
+            <version>28.0-jre</version>
+
+        </dependency>
+
+
+
+        <!--  《引入http请求的主体包》https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+
+        <dependency>
+
+            <groupId>org.apache.httpcomponents</groupId>
+
+            <artifactId>httpclient</artifactId>
+
+            <version>4.5.5</version>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>org.springframework</groupId>
+
+            <artifactId>spring-test</artifactId>
+
+            <version>3.1.4.RELEASE</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>org.apache.commons</groupId>
+
+            <artifactId>commons-lang3</artifactId>
+
+            <version>3.4</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>org.springframework</groupId>
+
+            <artifactId>spring-core</artifactId>
+
+            <version>4.2.5.RELEASE</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>org.springframework</groupId>
+
+            <artifactId>spring-core</artifactId>
+
+            <version>4.2.5.RELEASE</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>org.springframework</groupId>
+
+            <artifactId>spring-core</artifactId>
+
+            <version>4.2.5.RELEASE</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>org.springframework</groupId>
+
+            <artifactId>spring-beans</artifactId>
+
+            <version>4.2.5.RELEASE</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>org.springframework</groupId>
+
+            <artifactId>spring-context</artifactId>
+
+            <version>4.2.5.RELEASE</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+
+        <dependency>
+
+            <groupId>org.springframework</groupId>
+
+            <artifactId>spring-jdbc</artifactId>
+
+            <version>4.2.5.RELEASE</version>
+
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- 功能测试-->
+
+        <dependency>
+
+            <groupId>org.test4j</groupId>
+
+            <artifactId>test4j.testng</artifactId>
+
+            <version>2.0.7</version>
+
+        </dependency>
+
+        <!-- 业务测试-->
+
+        <dependency>
+
+            <groupId>org.test4j</groupId>
+
+            <artifactId>test4j.spec</artifactId>
+
+            <version>2.0.7</version>
+
+        </dependency>
+
+        <!-- 集成测试-->
+
+        <dependency>
+
+            <groupId>org.test4j</groupId>
+
+            <artifactId>test4j.integrated</artifactId>
+
+            <version>2.0.7</version>
+
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.11</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+
+
+    </dependencies>
+
+
+
+</project>
